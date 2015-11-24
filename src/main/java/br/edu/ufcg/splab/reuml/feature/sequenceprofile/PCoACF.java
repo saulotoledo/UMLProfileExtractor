@@ -7,7 +7,7 @@ import org.w3c.dom.Document;
 import javax.xml.xpath.*;
 
 /**
- * Created by gustavo on 12/05/15.
+ * Created by Thaciana Cerqueira 24/11/2015.
  */
 public class PCoACF implements Measurable {
 
