@@ -5,8 +5,6 @@ package br.edu.ufcg.splab.reuml.profile;
  */
 public class SequenceDiagramProfile extends UMLProfile {
 
-    double NL;
-
     double PAM;
 
     double PRM;
@@ -47,12 +45,11 @@ public class SequenceDiagramProfile extends UMLProfile {
         super();
     }
 
-    public SequenceDiagramProfile(double NL, double PAM, double PRM, double PCM, double PDM, double PCoCF,
+    public SequenceDiagramProfile(double PAM, double PRM, double PCM, double PDM, double PCoCF,
                                   double PItCF, double PBCF, double PCuCF, double PWCF, double PSCF,
                                   double PNCF, double PCrCF, double PIgCF, double PCsCF, double PACF,
                                   double PIU, double PAc, double PSI) {
         super();
-        this.NL = NL;
         this.PAM = PAM;
         this.PRM = PRM;
         this.PCM = PCM;
@@ -73,13 +70,7 @@ public class SequenceDiagramProfile extends UMLProfile {
         this.PSI = PSI;
     }
 
-    public double getNL() {
-        return this.NL;
-    }
-
-    public void setNL(double NL) {
-        this.NL = NL;
-    }
+   
 
     public double getPAM() {
         return this.PAM;
@@ -228,8 +219,7 @@ public class SequenceDiagramProfile extends UMLProfile {
     @Override
     public String toString() {
         return "SequenceDiagramProfile{" +
-                "NL=" + this.NL +
-                ", PAM=" + this.PAM +
+                "PAM=" + this.PAM +
                 ", PRM=" + this.PRM +
                 ", PCM=" + this.PCM +
                 ", PDM=" + this.PDM +
