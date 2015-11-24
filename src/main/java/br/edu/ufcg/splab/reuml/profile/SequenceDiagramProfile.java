@@ -5,7 +5,11 @@ package br.edu.ufcg.splab.reuml.profile;
  */
 public class SequenceDiagramProfile extends UMLProfile {
 
-    double PAM;
+	double PSM;
+	
+	double PACM;
+	
+	double PASM;
 
     double PRM;
 
@@ -13,7 +17,9 @@ public class SequenceDiagramProfile extends UMLProfile {
 
     double PDM;
 
-    double PCoCF;
+    double PCoACF;
+    
+    double PCoOCF;
 
     double PItCF;
 
@@ -45,16 +51,19 @@ public class SequenceDiagramProfile extends UMLProfile {
         super();
     }
 
-    public SequenceDiagramProfile(double PAM, double PRM, double PCM, double PDM, double PCoCF,
-                                  double PItCF, double PBCF, double PCuCF, double PWCF, double PSCF,
+    public SequenceDiagramProfile(double PSM, double PACM, double PASM, double PRM, double PCM, double PDM, double PCoACF,
+    							  double PCoOCF, double PItCF, double PBCF, double PCuCF, double PWCF, double PSCF,
                                   double PNCF, double PCrCF, double PIgCF, double PCsCF, double PACF,
                                   double PIU, double PAc, double PSI) {
         super();
-        this.PAM = PAM;
+        this.PSM = PSM;
+        this.PACM = PACM;
+        this.PASM = PASM;
         this.PRM = PRM;
         this.PCM = PCM;
         this.PDM = PDM;
-        this.PCoCF = PCoCF;
+        this.PCoACF = PCoACF;
+        this.PCoOCF = PCoOCF;
         this.PItCF = PItCF;
         this.PBCF = PBCF;
         this.PCuCF = PCuCF;
@@ -70,16 +79,30 @@ public class SequenceDiagramProfile extends UMLProfile {
         this.PSI = PSI;
     }
 
-   
-
-    public double getPAM() {
-        return this.PAM;
+    public double getPSM() {
+        return this.PSM;
     }
 
-    public void setPAM(double PAM) {
-        this.PAM = PAM;
+    public void setPSM(double PSM) {
+        this.PSM = PSM;
     }
 
+    public double getPACM() {
+        return this.PACM;
+    }
+
+    public void setPACM(double PACM) {
+        this.PACM = PACM;
+    }
+    
+    public double getPASM() {
+        return this.PASM;
+    }
+
+    public void setPASM(double PASM) {
+        this.PASM = PASM;
+    }
+    
     public double getPRM() {
         return this.PRM;
     }
@@ -104,12 +127,20 @@ public class SequenceDiagramProfile extends UMLProfile {
         this.PDM = PDM;
     }
 
-    public double getPCoCF() {
-        return this.PCoCF;
+    public double getPCoACF() {
+        return this.PCoACF;
     }
 
-    public void setPCoCF(double PCoCF) {
-        this.PCoCF = PCoCF;
+    public void setPCoACF(double PCoACF) {
+        this.PCoACF = PCoACF;
+    }
+    
+    public double getPCoOCF() {
+        return this.PCoOCF;
+    }
+
+    public void setPCoOCF(double PCoOCF) {
+        this.PCoOCF = PCoOCF;
     }
 
     public double getPItCF() {
@@ -219,11 +250,14 @@ public class SequenceDiagramProfile extends UMLProfile {
     @Override
     public String toString() {
         return "SequenceDiagramProfile{" +
-                "PAM=" + this.PAM +
+        		"PSM=" + this.PSM +
+        		", PACM=" + this.PACM +
+        		", PASM=" + this.PASM +
                 ", PRM=" + this.PRM +
                 ", PCM=" + this.PCM +
                 ", PDM=" + this.PDM +
-                ", PCoCF=" + this.PCoCF +
+                ", PCoACF=" + this.PCoACF +
+                ", PCoOCF=" + this.PCoOCF +
                 ", PItCF=" + this.PItCF +
                 ", PBCF=" + this.PBCF +
                 ", PCuCF=" + this.PCuCF +

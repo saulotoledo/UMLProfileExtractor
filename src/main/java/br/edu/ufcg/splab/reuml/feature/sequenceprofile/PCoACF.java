@@ -9,13 +9,12 @@ import javax.xml.xpath.*;
 /**
  * Created by gustavo on 12/05/15.
  */
-public class PAM implements Measurable {
+public class PCoACF implements Measurable {
 
-    public static final String NAME = "Presence of asynchronous messages";
-    private static final String XPATH_QUERY = "count(//message[@*=\"uml:Message\"][@messageSort=\"asynchSignal\"] |" +
-                                                   " //message[@*=\"uml:Message\"][@messageSort=\"asynchCall\"])";
+    public static final String NAME = "Presence of combined fragments of the conditional type (\"opt\" e \"alt\")";
+    private static final String XPATH_QUERY = "count(//fragment[@*=\"uml:CombinedFragment\"][@interactionOperator=\"alt\"])";
 
-    public PAM() {
+    public PCoACF() {
     }
 
     public double measureMetric(Document document) {

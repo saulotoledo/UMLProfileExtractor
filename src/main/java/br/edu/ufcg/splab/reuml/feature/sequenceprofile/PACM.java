@@ -7,15 +7,14 @@ import org.w3c.dom.Document;
 import javax.xml.xpath.*;
 
 /**
- * Created by gustavo on 12/05/15.
+ * Created by thaciana on 23/11/2015.
  */
-public class PCoCF implements Measurable {
+public class PACM implements Measurable {
 
-    public static final String NAME = "Presence of combined fragments of the conditional type (\"opt\" e \"alt\")";
-    private static final String XPATH_QUERY = "count(//fragment[@*=\"uml:CombinedFragment\"][@interactionOperator=\"opt\"] | " +
-                                                    "//fragment[@*=\"uml:CombinedFragment\"][@interactionOperator=\"alt\"])";
+    public static final String NAME = "Presence of asynchronous messages";
+    private static final String XPATH_QUERY = "count(//message[@*=\"uml:Message\"][@messageSort=\"asynchCall\"])";
 
-    public PCoCF() {
+    public PACM() {
     }
 
     public double measureMetric(Document document) {
