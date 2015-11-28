@@ -5,8 +5,6 @@ package br.edu.ufcg.splab.reuml.profile;
  */
 public class ClassDiagramProfile extends UMLProfile {
 
-    private double DIS;
-
     private double PSA;
 
     private double PDA;
@@ -47,11 +45,10 @@ public class ClassDiagramProfile extends UMLProfile {
         super();
     }
 
-    public ClassDiagramProfile(double DIS, double PSA, double PDA, double PADV, double PATPS, double PSO, double PRI,
+    public ClassDiagramProfile(double PSA, double PDA, double PADV, double PATPS, double PSO, double PRI,
                                double PASC, double PABC, double PTC, double PEN, double POD, double POQ, double POP,
                                double PNAA, double PSHA, double PCOA, double PGS, double PRMAT) {
         super();
-        this.DIS = DIS;
         this.PSA = PSA;
         this.PDA = PDA;
         this.PADV = PADV;
@@ -70,14 +67,6 @@ public class ClassDiagramProfile extends UMLProfile {
         this.PCOA = PCOA;
         this.PGS = PGS;
         this.PRMAT = PRMAT;
-    }
-
-    public double getDIS() {
-        return this.DIS;
-    }
-
-    public void setDIS(double DIS) {
-        this.DIS = DIS;
     }
 
     public double getPSA() {
@@ -227,8 +216,7 @@ public class ClassDiagramProfile extends UMLProfile {
     @Override
     public String toString() {
         return "ClassDiagramProfile{" +
-                "DIS=" + this.DIS +
-                ", PSA=" + this.PSA +
+                "PSA=" + this.PSA +
                 ", PDA=" + this.PDA +
                 ", PADV=" + this.PADV +
                 ", PATPS=" + this.PATPS +
