@@ -11,7 +11,7 @@ public class Main {
         UMLProfileService service = new UMLProfileService(
             "br.edu.ufcg.splab.reuml.feature"
         );
-        UMLProfile profile = service.getClassDiagramProfile("/home/saulo/TesteFerramenta/diagramas_classe/SimpleLibrary2.uml");
+        UMLProfile profile = service.getSequenceDiagramProfile("/home/thaciana/workspace/UMLProfileExtractor/diagramas_sequencia/GenerateBillSD.mdxml");
         System.out.println(profile.toString());
     }
 }

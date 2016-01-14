@@ -11,7 +11,7 @@ import javax.xml.xpath.*;
  */
 public class PACM implements Measurable {
 
-    public static final String NAME = "Presence of asynchronous messages";
+    public static final String NAME = "Presence of asynchronous call messages";
     private static final String XPATH_QUERY = "count(//message[@*=\"uml:Message\"][@messageSort=\"asynchCall\"])";
 
     public PACM() {

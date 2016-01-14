@@ -7,11 +7,11 @@ import org.w3c.dom.Document;
 import javax.xml.xpath.*;
 
 /**
- * Created by Thaciana Cerqueira 24/11/2015.
+ * Created by Thaciana Cerqueira 14/01/2016.
  */
 public class PCoACF implements Measurable {
 
-    public static final String NAME = "Presence of combined fragments of the conditional type (\"opt\" e \"alt\")";
+    public static final String NAME = "Presence of combined fragments of the conditional type (\"alt\")";
     private static final String XPATH_QUERY = "count(//fragment[@*=\"uml:CombinedFragment\"][@interactionOperator=\"alt\"])";
 
     public PCoACF() {
