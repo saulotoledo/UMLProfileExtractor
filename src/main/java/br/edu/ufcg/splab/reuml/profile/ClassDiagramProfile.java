@@ -17,6 +17,12 @@ public class ClassDiagramProfile extends UMLProfile {
 
     private double PRI;
 
+    private double POG;
+
+    private double POI;
+
+    private double PAO;
+
     private double PASC;
 
     private double PABC;
@@ -45,7 +51,7 @@ public class ClassDiagramProfile extends UMLProfile {
         super();
     }
 
-    public ClassDiagramProfile(double PSA, double PDA, double PADV, double PATPS, double PSO, double PRI,
+    public ClassDiagramProfile(double PSA, double PDA, double PADV, double PATPS, double PSO, double PRI, double POG, double POI, double PAO,
                                double PASC, double PABC, double PTC, double PEN, double POD, double POQ, double POP,
                                double PNAA, double PSHA, double PCOA, double PGS, double PRMAT) {
         super();
@@ -55,6 +61,11 @@ public class ClassDiagramProfile extends UMLProfile {
         this.PATPS = PATPS;
         this.PSO = PSO;
         this.PRI = PRI;
+
+        this.POG = this.POG;
+        this.POI = this.POI;
+        this.PAO = this.PAO;
+
         this.PASC = PASC;
         this.PABC = PABC;
         this.PTC = PTC;
@@ -115,6 +126,36 @@ public class ClassDiagramProfile extends UMLProfile {
 
     public void setPRI(double PRI) {
         this.PRI = PRI;
+    }
+
+    public double getPOG()
+    {
+        return this.POG;
+    }
+
+    public void setPOG(double POG)
+    {
+        this.POG = POG;
+    }
+
+    public double getPOI()
+    {
+        return this.POI;
+    }
+
+    public void setPOI(double POI)
+    {
+        this.POI = POI;
+    }
+
+    public double getPAO()
+    {
+        return this.PAO;
+    }
+
+    public void setPAO(double PAO)
+    {
+        this.PAO = PAO;
     }
 
     public double getPASC() {
@@ -222,6 +263,9 @@ public class ClassDiagramProfile extends UMLProfile {
                 ", PATPS=" + this.PATPS +
                 ", PSO=" + this.PSO +
                 ", PRI=" + this.PRI +
+                ", POG=" + this.POG +
+                ", POI=" + this.POI +
+                ", PAO=" + this.PAO +
                 ", PASC=" + this.PASC +
                 ", PABC=" + this.PABC +
                 ", PTC=" + this.PTC +
