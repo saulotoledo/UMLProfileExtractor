@@ -62,9 +62,9 @@ public class ClassDiagramProfile extends UMLProfile {
         this.PSO = PSO;
         this.PRI = PRI;
 
-        this.POG = this.POG;
-        this.POI = this.POI;
-        this.PAO = this.PAO;
+        this.POG = POG;
+        this.POI = POI;
+        this.PAO = PAO;
 
         this.PASC = PASC;
         this.PABC = PABC;
