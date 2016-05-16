@@ -11,7 +11,7 @@ import javax.xml.xpath.*;
  */
 public class PDA implements Measurable {
 
-    public static final String NAME = "Presence of Derived Attributes";
+    public static final String NAME = "Presence of Derived Attribute";
 
     private static final String XPATH_QUERY =
             "count(" +

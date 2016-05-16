@@ -12,7 +12,7 @@ import br.edu.ufcg.splab.reuml.feature.Measurable;
 
 public class POP implements Measurable {
 
-    public static final String NAME = "Presence of Ports";
+    public static final String NAME = "Presence of Port";
     private static final String XPATH_QUERY = "count(//packagedElement[@*=\"uml:Class\"]/ownedAttribute[@*=\"uml:Port\"])";
 
     public POP() {

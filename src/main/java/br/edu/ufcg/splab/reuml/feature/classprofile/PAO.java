@@ -12,7 +12,7 @@ import br.edu.ufcg.splab.reuml.feature.Measurable;
 
 public class PAO implements Measurable {
 
-    public static final String NAME = "Presence of Abstract Operations";
+    public static final String NAME = "Presence of Abstract Operation";
     private static final String XPATH_QUERY =
             "count(" +
             "      //packagedElement[@*=\"uml:Class\"]/ownedOperation[@isAbstract=\"true\"]   |" +

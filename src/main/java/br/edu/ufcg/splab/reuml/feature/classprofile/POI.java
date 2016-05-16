@@ -12,7 +12,7 @@ import br.edu.ufcg.splab.reuml.feature.Measurable;
 
 public class POI implements Measurable {
 
-    public static final String NAME = "Presence of Interfaces";
+    public static final String NAME = "Presence of Interface";
     private static final String XPATH_QUERY = "count(//packagedElement[@*=\"uml:Interface\"])";
 
     public POI() {

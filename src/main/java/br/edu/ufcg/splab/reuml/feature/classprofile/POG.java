@@ -12,7 +12,7 @@ import br.edu.ufcg.splab.reuml.feature.Measurable;
 
 public class POG implements Measurable {
 
-    public static final String NAME = "Presence of Generalizations";
+    public static final String NAME = "Presence of Generalization";
     private static final String XPATH_QUERY = "count(//packagedElement[@*=\"uml:Generalization\"])";
 
     public POG() {

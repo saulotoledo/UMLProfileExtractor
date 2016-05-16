@@ -11,13 +11,13 @@ import javax.xml.xpath.*;
  */
 public class POQ implements Measurable {
 
-    public static final String NAME = "Presence of Qualifiers";
+    public static final String NAME = "Presence of Qualifier";
+    
     private static final String XPATH_QUERY =
             "count(" +
             "      //packagedElement[@*=\"uml:Class\"]/qualifier    |" +
             "      //packagedElement[@*=\"uml:Interface\"]/qualifier" +
             ")";
-
 
     public POQ() {
     }

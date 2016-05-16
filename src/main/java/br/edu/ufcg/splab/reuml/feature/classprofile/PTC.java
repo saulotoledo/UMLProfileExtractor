@@ -11,7 +11,7 @@ import javax.xml.xpath.*;
  */
 public class PTC implements Measurable {
 
-    public static final String NAME = "Presence of Template Classes";
+    public static final String NAME = "Presence of Template Class";
     private static final String XPATH_QUERY = "count(//packagedElement[@*=\"uml:Class\"]/ownedTemplateSignature)";
 
     public PTC() {

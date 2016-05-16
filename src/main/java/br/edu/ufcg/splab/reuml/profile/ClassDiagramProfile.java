@@ -11,8 +11,6 @@ public class ClassDiagramProfile extends UMLProfile {
 
     private double PADV;
 
-    private double PATPS;
-
     private double PSO;
 
     private double PRI;
@@ -45,20 +43,17 @@ public class ClassDiagramProfile extends UMLProfile {
 
     private double PGS;
 
-    private double PRMAT;
-
     public ClassDiagramProfile() {
         super();
     }
 
-    public ClassDiagramProfile(double PSA, double PDA, double PADV, double PATPS, double PSO, double PRI, double POG, double POI, double PAO,
+    public ClassDiagramProfile(double PSA, double PDA, double PADV, double PSO, double PRI, double POG, double POI, double PAO,
                                double PASC, double PABC, double PTC, double PEN, double POD, double POQ, double POP,
-                               double PNAA, double PSHA, double PCOA, double PGS, double PRMAT) {
+                               double PNAA, double PSHA, double PCOA, double PGS) {
         super();
         this.PSA = PSA;
         this.PDA = PDA;
         this.PADV = PADV;
-        this.PATPS = PATPS;
         this.PSO = PSO;
         this.PRI = PRI;
 
@@ -77,7 +72,6 @@ public class ClassDiagramProfile extends UMLProfile {
         this.PSHA = PSHA;
         this.PCOA = PCOA;
         this.PGS = PGS;
-        this.PRMAT = PRMAT;
     }
 
     public double getPSA() {
@@ -102,14 +96,6 @@ public class ClassDiagramProfile extends UMLProfile {
 
     public void setPADV(double PADV) {
         this.PADV = PADV;
-    }
-
-    public double getPATPS() {
-        return this.PATPS;
-    }
-
-    public void setPATPS(double PATPS) {
-        this.PATPS = PATPS;
     }
 
     public double getPSO() {
@@ -246,21 +232,12 @@ public class ClassDiagramProfile extends UMLProfile {
         this.PGS = PGS;
     }
 
-    public double getPRMAT() {
-        return this.PRMAT;
-    }
-
-    public void setPRMAT(double PRMAT) {
-        this.PRMAT = PRMAT;
-    }
-
     @Override
     public String toString() {
         return "ClassDiagramProfile{" +
                 "PSA=" + this.PSA +
                 ", PDA=" + this.PDA +
                 ", PADV=" + this.PADV +
-                ", PATPS=" + this.PATPS +
                 ", PSO=" + this.PSO +
                 ", PRI=" + this.PRI +
                 ", POG=" + this.POG +
@@ -277,7 +254,6 @@ public class ClassDiagramProfile extends UMLProfile {
                 ", PSHA=" + this.PSHA +
                 ", PCOA=" + this.PCOA +
                 ", PGS=" + this.PGS +
-                ", PRMAT=" + this.PRMAT +
                 "} ";
     }
 }

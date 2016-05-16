@@ -11,7 +11,7 @@ import javax.xml.xpath.*;
  */
 public class PSHA implements Measurable {
 
-    public static final String NAME = "Presence of Shared Associations";
+    public static final String NAME = "Presence of Shared Association";
     private static final String XPATH_QUERY =
             "count(" +
                    "//packagedElement[@*=\"uml:Association\"]/ownedEnd[@aggregation=\"shared\"]" +

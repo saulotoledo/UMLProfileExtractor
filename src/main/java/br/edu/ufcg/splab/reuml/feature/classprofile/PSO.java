@@ -11,7 +11,7 @@ import javax.xml.xpath.*;
  */
 public class PSO implements Measurable {
 
-    public static final String NAME = "Presence of Static Operations";
+    public static final String NAME = "Presence of Static Operation";
     private static final String XPATH_QUERY =
             "count(" +
             "      //packagedElement[@*=\"uml:Class\"]/ownedOperation[@isStatic=\"true\"]   |" +

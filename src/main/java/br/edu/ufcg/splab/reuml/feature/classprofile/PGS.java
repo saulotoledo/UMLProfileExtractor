@@ -11,7 +11,7 @@ import javax.xml.xpath.*;
  */
 public class PGS implements Measurable {
 
-    public static final String NAME = "Presence of Generalization Sets";
+    public static final String NAME = "Presence of Generalization Set";
     private static final String XPATH_QUERY = "count(//packagedElement[@*=\"uml:GeneralizationSet\"])";
 
     public PGS() {

@@ -11,7 +11,7 @@ import javax.xml.xpath.*;
  */
 public class PADV implements Measurable {
 
-    public static final String NAME = "Presence of Attributes with Default Values";
+    public static final String NAME = "Presence of Attribute with Default Value";
 
     private static final String XPATH_QUERY =
             "count(" +

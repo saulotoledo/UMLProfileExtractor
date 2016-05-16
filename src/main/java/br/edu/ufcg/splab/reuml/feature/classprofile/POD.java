@@ -11,7 +11,7 @@ import javax.xml.xpath.*;
  */
 public class POD implements Measurable {
 
-    public static final String NAME = "Presence of Dependencies";
+    public static final String NAME = "Presence of Dependency";
     private static final String XPATH_QUERY = "count(//packagedElement[@*=\"uml:Usage\"])";
 
     public POD() {

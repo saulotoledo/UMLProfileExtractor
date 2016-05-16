@@ -11,7 +11,7 @@ import javax.xml.xpath.*;
  */
 public class PSA implements Measurable {
 
-    public static final String NAME = "Presence of Static Attributes";
+    public static final String NAME = "Presence of Static Attribute";
 
     private static final String XPATH_QUERY =
             "count(" +

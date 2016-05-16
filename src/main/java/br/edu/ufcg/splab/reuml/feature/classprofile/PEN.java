@@ -11,7 +11,7 @@ import javax.xml.xpath.*;
  */
 public class PEN implements Measurable {
 
-    public static final String NAME = "Presence of Enumerations";
+    public static final String NAME = "Presence of Enumeration";
     private static final String XPATH_QUERY = "count(//packagedElement[@*=\"uml:Enumeration\"])";
 
     public PEN() {
