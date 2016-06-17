@@ -15,6 +15,7 @@ public class PTC implements Measurable {
     private static final String XPATH_QUERY =
             "count(" +
                 "//packagedElement[@*=\"uml:Class\"]/ownedTemplateSignature | " +
+                "//packagedElement[@*=\"uml:Interface\"]/ownedTemplateSignature | " +
                 "//*[local-name()='TemplateParameter']" +
             ")";
 
