@@ -12,7 +12,11 @@ import javax.xml.xpath.*;
 public class PASC implements Measurable {
 
     public static final String NAME = "Presence of Association Class";
-    private static final String XPATH_QUERY = "count(//packagedElement[@*=\"uml:AssociationClass\"])";
+    private static final String XPATH_QUERY =
+            "count(" +
+                    "//packagedElement[@*=\"uml:AssociationClass\"] | " +
+                    "//*[local-name()='AssociationClass']" +
+                ")";
 
     public PASC() {
     }

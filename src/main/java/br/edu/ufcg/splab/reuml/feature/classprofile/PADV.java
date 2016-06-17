@@ -15,8 +15,9 @@ public class PADV implements Measurable {
 
     private static final String XPATH_QUERY =
             "count(" +
-            "      //packagedElement[@*=\"uml:Class\"]/ownedAttribute/defaultValue  | " +
-            "      //packagedElement[@*=\"uml:Interface\"]/ownedAttribute/defaultValue" +
+        		"//packagedElement[@*=\"uml:Class\"]/ownedAttribute/defaultValue | " +
+        		"//packagedElement[@*=\"uml:Interface\"]/ownedAttribute/defaultValue | " +
+        		"//*[local-name()=\"Attribute\"]/*[local-name()=\"Attribute.initialValue\"]" +
             ")";
 
     public PADV() {

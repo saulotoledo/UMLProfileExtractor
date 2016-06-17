@@ -13,8 +13,16 @@ import br.edu.ufcg.splab.reuml.feature.Measurable;
 public class POP implements Measurable {
 
     public static final String NAME = "Presence of Port";
+    
+    /* 
+     * TODO: Check completeness of expression.  
+     * A port is a new concept in UML 2.0. The following XPath expression is
+     * enough to our current diagrams database. You should check if you need
+     * some other expression for Ports in your database diagrams.
+     */
     private static final String XPATH_QUERY = "count(//packagedElement[@*=\"uml:Class\"]/ownedAttribute[@*=\"uml:Port\"])";
-
+    
+    
     public POP() {
     }
 

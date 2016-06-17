@@ -13,7 +13,12 @@ import br.edu.ufcg.splab.reuml.feature.Measurable;
 public class POI implements Measurable {
 
     public static final String NAME = "Presence of Interface";
-    private static final String XPATH_QUERY = "count(//packagedElement[@*=\"uml:Interface\"])";
+    private static final String XPATH_QUERY =
+            "count(" +
+                "//packagedElement[@*=\"uml:Interface\"] | " +
+                "//*[local-name()='Interface'] | " +
+                "//*[local-name()='Stereotype'][contains(@*[local-name()='name'], 'interface')]" +
+            ")";
 
     public POI() {
     }

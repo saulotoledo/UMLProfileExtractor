@@ -15,8 +15,10 @@ public class POQ implements Measurable {
     
     private static final String XPATH_QUERY =
             "count(" +
-            "      //packagedElement[@*=\"uml:Class\"]/qualifier    |" +
-            "      //packagedElement[@*=\"uml:Interface\"]/qualifier" +
+	            "//packagedElement[@*=\"uml:Class\"]/qualifier     | " +
+	            "//packagedElement[@*=\"uml:Interface\"]/qualifier | " +
+	            "//ownedEnd/qualifier | " +
+	            "//*[local-name()='AssociationEnd.qualifier']" +
             ")";
 
     public POQ() {

@@ -12,7 +12,11 @@ import javax.xml.xpath.*;
 public class PABC implements Measurable {
 
     public static final String NAME = "Presence of Abstract Class";
-    private static final String XPATH_QUERY = "count(//packagedElement[@*=\"uml:Class\" and @isAbstract=\"true\"])";
+    private static final String XPATH_QUERY =
+            "count(" +
+            	"//packagedElement[@*=\"uml:Class\" and @isAbstract=\"true\"] | " +
+            	"//*[local-name()='Class'][@isAbstract='true']" +
+            ")";
 
     public PABC() {
     }

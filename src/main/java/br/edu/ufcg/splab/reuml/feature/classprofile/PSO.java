@@ -14,10 +14,11 @@ public class PSO implements Measurable {
     public static final String NAME = "Presence of Static Operation";
     private static final String XPATH_QUERY =
             "count(" +
-            "      //packagedElement[@*=\"uml:Class\"]/ownedOperation[@isStatic=\"true\"]   |" +
-            "      //packagedElement[@*=\"uml:Interface\"]/ownedOperation[@isStatic=\"true\"]" +
-            "     )";
-
+            	"//packagedElement[@*=\"uml:Class\"]/ownedOperation[@isStatic=\"true\"] | " +
+            	"//packagedElement[@*=\"uml:Interface\"]/ownedOperation[@isStatic=\"true\"] | " +
+            	"//*[local-name()='Operation'][@ownerScope=\"classifier\"]" +
+            ")";
+    
     public PSO() {
     }
 

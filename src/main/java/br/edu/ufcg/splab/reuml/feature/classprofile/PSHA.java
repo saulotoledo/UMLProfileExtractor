@@ -14,9 +14,10 @@ public class PSHA implements Measurable {
     public static final String NAME = "Presence of Shared Association";
     private static final String XPATH_QUERY =
             "count(" +
-                   "//packagedElement[@*=\"uml:Association\"]/ownedEnd[@aggregation=\"shared\"]" +
+                "//packagedElement[@*=\"uml:Association\"]/ownedEnd[@aggregation=\"shared\"] | " +
+                "//*[local-name()='AssociationEnd'][@aggregation=\"aggregate\"]" +
             ")";
-
+    
     public PSHA() {
     }
 

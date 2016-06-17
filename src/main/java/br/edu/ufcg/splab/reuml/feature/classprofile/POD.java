@@ -14,11 +14,21 @@ public class POD implements Measurable {
     public static final String NAME = "Presence of Dependency";
     private static final String XPATH_QUERY =
             "count(" +
-                    "//packagedElement[@*=\"uml:Dependency\"] | " +
-                    "//packagedElement[@*=\"uml:Usage\"] | " +
-                    "//packagedElement[@*=\"uml:Abstraction\"] | " +
-                    "//packagedElement[@*=\"uml:InterfaceRealization\"] | " +
-                    "//packagedElement[@*=\"uml:ComponentRealization\"]" +
+                "//packagedElement[@*=\"uml:Dependency\"] | " +
+                "//packagedElement[@*=\"uml:Usage\"] | " +
+                "//packagedElement[@*=\"uml:Abstraction\"] | " +
+                "//packagedElement[@*=\"uml:InterfaceRealization\"] | " +
+                "//packagedElement[@*=\"uml:ComponentRealization\"] | " +
+                
+                "//*[local-name()='Dependency'] | " +
+                "//*[local-name()='Usage'] | " +
+                "//*[local-name()='Abstraction'] | " +
+                "//*[local-name()='Permission']" +
+                
+				// UML1 does not have interfaceRealization as a dependency,
+				// we are adding it here for compatibility with our dependency
+				// definition at experiment:
+                "//*[local-name()='Dependency.supplier']/*[local-name()='Interface'] " +
             ")";
 
     public POD() {

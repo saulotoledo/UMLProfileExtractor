@@ -14,7 +14,8 @@ public class PCOA implements Measurable {
     public static final String NAME = "Presence of Composite Association";
     private static final String XPATH_QUERY =
             "count(" +
-                    "//packagedElement[@*=\"uml:Association\"]/ownedEnd[@aggregation=\"composite\"]" +
+                "//packagedElement[@*=\"uml:Association\"]/ownedEnd[@aggregation=\"composite\"] | " +
+                "//*[local-name()='AssociationEnd'][@aggregation=\"composite\"]" +
             ")";
 
     public PCOA() {

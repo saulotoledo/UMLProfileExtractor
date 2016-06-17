@@ -12,12 +12,12 @@ import javax.xml.xpath.*;
 public class PSA implements Measurable {
 
     public static final String NAME = "Presence of Static Attribute";
-
     private static final String XPATH_QUERY =
             "count(" +
-                    "      //packagedElement[@*=\"uml:Class\"]/ownedAttribute[@isStatic=\"true\"]  | " +
-                    "      //packagedElement[@*=\"uml:Interface\"]/ownedAttribute[@isStatic=\"true\"]" +
-                    ")";
+            	"//packagedElement[@*=\"uml:Class\"]/ownedAttribute[@isStatic=\"true\"]  | " +
+            	"//packagedElement[@*=\"uml:Interface\"]/ownedAttribute[@isStatic=\"true\"] | " +
+            	"//*[local-name()='Attribute'][@ownerScope=\"classifier\"]" +
+            ")";
 
     public PSA() {
     }

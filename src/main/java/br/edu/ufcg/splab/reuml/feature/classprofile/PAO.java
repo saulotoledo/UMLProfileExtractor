@@ -15,9 +15,10 @@ public class PAO implements Measurable {
     public static final String NAME = "Presence of Abstract Operation";
     private static final String XPATH_QUERY =
             "count(" +
-            "      //packagedElement[@*=\"uml:Class\"]/ownedOperation[@isAbstract=\"true\"]   |" +
-            "      //packagedElement[@*=\"uml:Interface\"]/ownedOperation[@isAbstract=\"true\"]" +
-            "     )";
+        		"//packagedElement[@*=\"uml:Class\"]/ownedOperation[@isAbstract=\"true\"] | " +
+        		"//packagedElement[@*=\"uml:Interface\"]/ownedOperation[@isAbstract=\"true\"] | " +
+        		"//*[local-name()='Operation'][@isAbstract=\"true\"]" +
+            ")";
 
     public PAO() {
     }

@@ -12,7 +12,11 @@ import javax.xml.xpath.*;
 public class PNAA implements Measurable {
 
     public static final String NAME = "Presence of Navigable Association";
-    private static final String XPATH_QUERY = "count(//packagedElement[@*=\"uml:Association\" and @navigableOwnedEnd])";
+    private static final String XPATH_QUERY =
+            "count(" +
+                "//packagedElement[@*=\"uml:Association\" and @navigableOwnedEnd] | " +
+                "//*[local-name()='AssociationEnd'][@isNavigable=\"true\"]" +
+            ")";
 
     public PNAA() {
     }

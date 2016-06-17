@@ -13,7 +13,11 @@ public class PRI implements Measurable {
 
     public static final String NAME = "Presence of Realized Interface";
     private static final String XPATH_QUERY_CHECK = "count(//packagedElement[@*=\"uml:Interface\"])";
-    private static final String XPATH_QUERY = "count(//interfaceRealization)";
+    private static final String XPATH_QUERY =
+            "count(" +
+            	"//interfaceRealization | " +
+            	"//*[local-name()='Dependency.supplier']/*[local-name()='Interface'] " +
+            ")";
 
     public PRI() {
     }
